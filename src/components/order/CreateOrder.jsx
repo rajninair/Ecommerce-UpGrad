@@ -147,7 +147,7 @@ const CreateOrder = () => {
         console.log("SUCCESS");
         toast.success("Your order is confirmed.");
         setTimeout(() => {
-          navigate("/products");
+          navigate("/");
         }, 5000);
       } else {
         throw new Error("Failed to place order.");
@@ -188,9 +188,6 @@ const CreateOrder = () => {
     }
   };
 
-  // Handle snackbar close
-  const handleCloseSnackbar = () => setSnackbarOpen(false);
-
   const getStepContent = (step) => {
     switch (step) {
       case 0:
@@ -198,7 +195,7 @@ const CreateOrder = () => {
           <div
             style={{
               width: "90%",
-              margin: "50px auto 60px",
+              margin: "50px auto 20px",
             }}
           >
             <ProductDetails
@@ -443,17 +440,9 @@ const CreateOrder = () => {
 
   return (
     <>
-      {loading && (
-        <CircularProgress
-          color="secondary"
-          size="3rem"
-          justifyContent="center"
-        />
-      )}
       <ToastContainer />
       <div
         style={{
-          marginBottom: "60px",
           margin: "80px auto 20px",
         }}
       >
@@ -467,7 +456,7 @@ const CreateOrder = () => {
       </div>
       <div
         style={{
-          margin: "40px auto 60px",
+          margin: "20px auto 20px",
         }}
       >
         {getStepContent(activeStep)}
@@ -476,7 +465,7 @@ const CreateOrder = () => {
       <div
         style={{
           width: "90%",
-          margin: "0px auto 50px",
+          margin: "0px auto 0px",
           textAlign: "center",
         }}
       >
@@ -495,17 +484,6 @@ const CreateOrder = () => {
           {activeStep === steps.length - 1 ? "Place Order" : "Next"}
         </Button>
       </div>
-      {/* Snackbar for feedback messages */}
-      <Snackbar
-        open={snackbarOpen}
-        autoHideDuration={3000}
-        onClose={handleCloseSnackbar}
-        anchorOrigin={{ vertical: "top", horizontal: "center" }}
-      >
-        <Alert onClose={handleCloseSnackbar} severity={snackbarSeverity}>
-          {snackbarMessage}
-        </Alert>
-      </Snackbar>
     </>
   );
 };

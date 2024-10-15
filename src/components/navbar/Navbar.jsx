@@ -101,7 +101,7 @@ const Navbar = () => {
           {user ? (
             <>
               {user && (
-                <Link to="/products" style={{ color: "white" }}>
+                <Link to="/" style={{ color: "white" }}>
                   Home
                 </Link>
               )}
@@ -124,21 +124,13 @@ const Navbar = () => {
             </>
           ) : (
             <>
-              <Link to="/products" style={{ color: "white" }}>
-                Home
-              </Link>
-              {/* <Button color="inherit" component={Link} to="/products">
-                Home
-              </Button> */}
-              <Button color="inherit" component={Link} to="/signin">
+              <Link to="/signin" style={{ color: "white" }}>
                 Signin
-              </Button>
-              <Button color="inherit" component={Link} to="/signup">
+              </Link>
+
+              <Link to="/signup" style={{ color: "white" }}>
                 Sign Up
-              </Button>
-              <IconButton edge="end" color="inherit">
-                <ShoppingCart />
-              </IconButton>
+              </Link>
             </>
           )}
         </Box>

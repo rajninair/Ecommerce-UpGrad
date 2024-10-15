@@ -13,6 +13,7 @@ import AddProduct from "./components/products/AddProduct";
 import ProductDetails from "./components/products/ProductDetails";
 import CreateOrder from "./components/order/CreateOrder";
 import EditProduct from "./components/products/EditProduct";
+import NotFound from "./components/not-found/NotFound";
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
 
           {/* Protected routes - for logged in users */}
           <Route element={<ProtectedRoute />}>
-            <Route path="/products" element={<Products />} />
+            <Route path="/" element={<Products />} />
             <Route path={`/products/show/:id`} element={<ProductDetails />} />
             <Route path={`/order/:id/:quantity?`} element={<CreateOrder />} />
             <Route
@@ -40,6 +41,9 @@ function App() {
           <Route element={<AdminRoute />}>
             <Route path="/add-product" element={<AddProduct />} />
           </Route>
+
+          {/* Catch-all route for undefined URLs */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </AuthProvider>
     </Router>

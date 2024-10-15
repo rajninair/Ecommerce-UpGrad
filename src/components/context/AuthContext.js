@@ -58,7 +58,7 @@ export const AuthProvider = ({ children }) => {
       localStorage.setItem("user", JSON.stringify(userData));
 
       // Navigate to products page after successful login
-      navigate("/products", { state: { message: "Login successful" } });
+      navigate("/", { state: { message: "Login successful" } });
     } catch (err) {
       toast.error(err.toString(), { toastId: "login-error" });
     }

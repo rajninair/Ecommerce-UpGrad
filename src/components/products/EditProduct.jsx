@@ -56,9 +56,11 @@ const EditProduct = () => {
         console.log("Data... ", data.ok);
         if (data.ok) {
           console.log("SUCCESS");
-          toast.success("Product updated successfully");
+          toast.success(
+            `Product ${updatedProductData.name} modified successfully`
+          );
           setTimeout(() => {
-            navigate("/products");
+            navigate("/");
           }, 5000);
         } else {
           throw new Error(

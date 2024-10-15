@@ -9,7 +9,7 @@ const PublicRoute = () => {
   if (loading) {
     return <div>Loading...</div>;
   }
-
+  // For guest users
   return user ? <Navigate to="/signin" /> : <Outlet />;
 };
 

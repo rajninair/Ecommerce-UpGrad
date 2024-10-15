@@ -9,7 +9,7 @@ const ProtectedRoute = () => {
   if (loading) {
     return <div>Loading...</div>;
   }
-
+  // For logged in users
   return user ? <Outlet /> : <Navigate to="/signin" />;
 };
 

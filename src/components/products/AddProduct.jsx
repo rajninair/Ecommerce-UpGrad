@@ -21,7 +21,7 @@ const AddProduct = () => {
 
       if (response.ok) {
         console.log("SUCCESS");
-        toast.success("Product added successfully");
+        toast.success(`Product ${productData.name} added successfully`);
       } else {
         console.log("data ", data);
         throw new Error("There was a problem adding product: " + data.message);

@@ -15,7 +15,7 @@ const Signin = () => {
   useEffect(() => {
     // If the user is logged in, navigate to the /products page
     if (user) {
-      navigate("/products");
+      navigate("/");
     }
   }, [user, navigate]);
 
@@ -23,7 +23,7 @@ const Signin = () => {
     e.preventDefault();
     const loggedInUser = await login(username, password);
     if (loggedInUser) {
-      navigate("/products"); // Redirect to products page on successful login
+      navigate("/"); // Redirect to home/products page on successful login
     } else {
       console.log("Login failed");
     }
