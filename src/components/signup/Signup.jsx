@@ -48,7 +48,7 @@ const SignUp = () => {
       <Box display="flex" flexDirection="column" alignItems="center">
         <img
           style={{ width: "40px", height: "40px" }}
-          src="lock-icon.png"
+          src="upgrad-logo.png"
           alt="login icon"
         />
         <Typography variant="h5" gutterBottom>

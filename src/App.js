@@ -8,11 +8,13 @@ import Products from "./components/products/Products";
 import ProtectedRoute from "./components/ProtectedRoute";
 import AdminRoute from "./components/AdminRoute";
 import PublicRoute from "./components/PublicRoute";
+import Navbar from "./components/navbar/Navbar";
 
 function App() {
   return (
     <Router>
       <AuthProvider>
+        <Navbar />
         <Routes>
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<SignUp />} />

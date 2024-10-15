@@ -33,6 +33,9 @@ export const AuthProvider = ({ children }) => {
         },
         body: JSON.stringify({ username, password }),
       });
+      if (response.ok) {
+        toast.success("Logged in successfully", { toastId: "login-success" });
+      }
 
       if (!response.ok) {
         if (response.status === 401) {
@@ -53,9 +56,9 @@ export const AuthProvider = ({ children }) => {
       // Save user with token to state and localStorage
       setUser(userData);
       localStorage.setItem("user", JSON.stringify(userData));
-      toast.success("Logged in successfully", { toastId: "login-success" });
+
       // Navigate to products page after successful login
-      navigate("/", { state: { message: "Login successful" } });
+      navigate("/products", { state: { message: "Login successful" } });
     } catch (err) {
       toast.error(err.toString(), { toastId: "login-error" });
     }
