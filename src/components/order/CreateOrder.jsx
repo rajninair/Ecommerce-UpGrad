@@ -11,8 +11,6 @@ import {
   MenuItem,
   FormControl,
   InputLabel,
-  Snackbar,
-  Alert,
   Container,
   Box,
   Divider,
@@ -49,12 +47,9 @@ const CreateOrder = () => {
     state: "",
     zipcode: "",
   });
-  const [quantityError, setQuantityError] = useState("");
 
   const [error, setError] = useState("");
-  const [snackbarOpen, setSnackbarOpen] = useState(false);
-  const [snackbarMessage, setSnackbarMessage] = useState("");
-  const [snackbarSeverity, setSnackbarSeverity] = useState("success");
+
   const navigate = useNavigate();
 
   const steps = ["Product Details", "Address Details", "Order Confirmation"];
@@ -441,6 +436,7 @@ const CreateOrder = () => {
   return (
     <>
       <ToastContainer />
+
       <div
         style={{
           margin: "80px auto 20px",

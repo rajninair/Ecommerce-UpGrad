@@ -32,7 +32,8 @@ const Category = ({ onCategoryChange }) => {
   // Handle category change
   const handleCategoryChange = (event, newValue) => {
     setSelectedCategory(newValue);
-    onCategoryChange(newValue); // Call the parent function to change the category
+    onCategoryChange(newValue);
+    // Call the parent function to change the category
   };
 
   return (

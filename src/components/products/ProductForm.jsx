@@ -203,7 +203,7 @@ const ProductForm = ({ initialData = {}, onSubmit, isEdit = false }) => {
             variant="outlined"
             name="description"
             multiline
-            rows={4}
+            rows={2}
             value={formData.description}
             onChange={handleChange}
             required

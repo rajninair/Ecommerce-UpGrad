@@ -8,15 +8,14 @@ const NotFound = () => {
       direction="column"
       justifyContent="center"
       alignItems="center"
-      style={{ minHeight: "100vh" }} // Full-height centering
+      style={{ minHeight: "100vh" }} 
     >
       <Grid item xs={12}>
         <Paper elevation={3} style={{ padding: "2rem", textAlign: "center" }}>
           <Box
             component="img"
-            src="404-page.jpg" // Image source
+            src="404-page.jpg" 
             alt="404 Not Found"
-            style={{ width: "200px", marginBottom: "1rem" }} // Adjust image size and spacing
           />
           <Typography variant="h4" gutterBottom>
             404 - Page Not Found
