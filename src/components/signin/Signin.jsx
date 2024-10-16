@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Copyright from "../../common/copyright/Copyright";
 
 const Signin = () => {
   const [username, setUsername] = useState("");
@@ -30,7 +31,7 @@ const Signin = () => {
   };
 
   return (
-    <Container maxWidth="xs" sx={{ marginTop: 6 }}>
+    <Container maxWidth="xs" sx={{ marginTop: 6, height: "80dvh" }}>
       <ToastContainer position="top-center" />
       <Box display="flex" flexDirection="column" alignItems="center">
         <img
@@ -42,7 +43,6 @@ const Signin = () => {
           Sign in
         </Typography>
       </Box>
-
       <form onSubmit={handleSubmit}>
         <TextField
           variant="outlined"
@@ -76,21 +76,7 @@ const Signin = () => {
         </div>
       </form>
 
-      <div
-        style={{ display: "flex", justifyContent: "center", marginTop: "50px" }}
-      >
-        <Typography variant="h6" gutterBottom style={{ fontSize: "14px" }}>
-          Copyright <small>&#169;</small>{" "}
-          <a
-            href="https://www.upgrad.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {" "}
-            2021 upGrad
-          </a>
-        </Typography>
-      </div>
+      <Copyright />
     </Container>
   );
 };

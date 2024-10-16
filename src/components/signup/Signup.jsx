@@ -3,6 +3,7 @@ import { Button, TextField, Typography, Container, Box } from "@mui/material";
 import { Link } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Copyright from "../../common/copyright/Copyright";
 const SignUp = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -122,20 +123,7 @@ const SignUp = () => {
           <Link to="/signin">Already have an account? Sign In</Link>
         </div>
       </form>
-      <div
-        style={{ display: "flex", justifyContent: "center", marginTop: "50px" }}
-      >
-        <Typography variant="h6" gutterBottom style={{ fontSize: "14px" }}>
-          Copyright <small>&#169;</small>{" "}
-          <a
-            href="https://www.upgrad.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            2021 upGrad
-          </a>
-        </Typography>
-      </div>
+      <Copyright />
       <ToastContainer position="top-center" />
     </Container>
   );

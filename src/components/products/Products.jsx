@@ -19,6 +19,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useLocation, useNavigate } from "react-router-dom";
 import DeleteDialog from "../../common/DeleteDialog";
+import Copyright from "../../common/copyright/Copyright";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -252,8 +253,8 @@ const Products = () => {
         onDeleteConfirm={handleDeleteConfirm}
         onDeleteCancel={handleDeleteCancel}
       />
-      {/*  */}
-      {/* Delete Confirmation Dialog */}
+
+      <Copyright />
     </div>
   );
 };
