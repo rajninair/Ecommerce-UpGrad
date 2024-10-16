@@ -7,8 +7,8 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Signin = () => {
-  const [username, setUsername] = useState("admin@demo.com");
-  const [password, setPassword] = useState("password");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   const { user, login } = useContext(AuthContext);
   const navigate = useNavigate();
 

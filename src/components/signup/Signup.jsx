@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const SignUp = () => {
-  const [firstName, setFirstName] = useState("rajni");
-  const [lastName, setLastName] = useState("nair");
-  const [email, setEmail] = useState("rajni1@gmail.com");
-  const [password, setPassword] = useState("password");
-  const [contactNumber, setContactNumber] = useState("1234567890");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [contactNumber, setContactNumber] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
